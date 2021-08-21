@@ -34,7 +34,7 @@ $(function () {
     $('#form_reg').on('submit',function (e) {
         //阻止默认提交事件
         e.preventDefault();
-        $.post('http://ajax.frontend.itheima.net/api/reguser',
+        $.post('/api/reguser',
             { username: $('#form_reg [name=username]').val(),
             password: $('#form_reg [name=password]').val() },
             function (res) {
@@ -51,7 +51,7 @@ $(function () {
     $('#form_login').submit(function (e) {
         e.preventDefault();
         $.ajax({
-            url:'http://ajax.frontend.itheima.net/api/login',
+            url:'/api/login',
             method: 'POST',
             //快速获取表单中的数据
             data: $(this).serialize(),
