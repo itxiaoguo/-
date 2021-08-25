@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--导入layui的css-->
+  <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+  <!--导入cropper.css样式文件-->
+  <link rel="stylesheet" href="../assets/lib/cropper/cropper.css">
+  <!--导入自己的css-->
+  <link rel="stylesheet" href="../assets/css/user/avatar.css">
+</head>
+<body>
+<!--卡片区域-->
+  <div class="layui-card">
+    <div class="layui-card-header">更换头像</div>
+    <div class="layui-card-body">
+      <!--第一行图片裁剪和预览区域-->
+      <div class="row1">
+        <!--图片裁剪区域-->
+        <div class="cropper-box">
+          <img id="img" src="../assets/images/sample.jpg" />
+        </div>
+        <!--图片预览区域-->
+        <div class="preview-box">
+          <div>
+            <!--宽高为100的预览区-->
+            <div class="img-preview w100"></div>
+            <p class="size">100 * 100</p>
+          </div>
+          <div>
+            <!--宽高为50的预览区-->
+            <div class="img-preview w50"></div>
+            <p class="size">50 * 50</p>
+          </div>
+        </div>
+      </div>
+      
+      <!--第二行按钮区域-->
+      <div class="row2">
+        <!--通过accept属性，可以指定用户选择什么类型的文件-->
+        <input type="file" id="file" accept="image/png,image/jpg" >
+        <button type="button" class="layui-btn" id="btnChooseImage">上传</button>
+        <button type="button" class="layui-btn layui-btn-danger" id="btnUpload">确定</button>
+      </div>
+    </div>
+  </div>
+<!--导入layui的js文件-->
+<script src="../assets/lib/layui/layui.all.js"></script>
+<!--导入jq-->
+<script src="../assets/lib/jquery.js"></script>
+<!--导入cropper的js文件-->
+<script src="../assets/lib/cropper/Cropper.js"></script>
+<!--导入jq-cropper的js文件-->
+<script src="../assets/lib/cropper/jquery-cropper.js"></script>
+<!--导入api文件-->
+<script src="../assets/js/baseAPI.js"></script>
+<!--导入自己的js-->
+<script src="../assets/js/user_avatar.js"></script>
+</body>
+</html>
